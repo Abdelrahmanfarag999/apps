@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yummy</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="../css/all.min.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+
+<body class="bg-black">
+
+    <!-- side bar -->
+    <section class="menu d-flex position-fixed  ">
+        <div id="mySideMenu" class="nav d-flex flex-column justify-content-between pt-4">
+            <div class="list ">
+                <ul class="navs text-white list-unstyled px-3 d-none">
+                    <li><a class="pages" href="#searchPage">search</a></li>
+                    <li><a class="pages" href="#cat">categories</a></li>
+                    <li><a class="pages" href="#area">area</a></li>
+                    <li><a class="pages" href="#Ingredients">ingredients</a></li>
+                    <li><a class="pages" href="#contact">contact us</a></li>
+                </ul>
+            </div>
+            <div class="textNave text-white px-3 d-none">
+                <span><a href=""><i class="fa-brands fa-facebook text-white"></i></a><a href=""><i
+                            class="fa-brands fa-twitter text-white px-2"></i></a><a href=""><i
+                            class="fa-solid fa-globe text-white "></i></a></span>
+                <p>Copyright Â© 2019 All Rights <br>
+                    Reserved.</p>
+            </div>
+        </div>
+        <div class="iqonMenu d-flex flex-column justify-content-between align-items-center ">
+            <div class="logo ">
+                <img class="w-100" src="../imgs/logo.png" alt="">
+            </div>
+            <div class="close"> <button id="menu-btn" class="bg-white border-0"><i
+                        class="fa-solid fa-bars fs-2 "></i></button></div>
+            <div class="sclOne d-flex flex-column justify-content-between align-items-center "><i
+                    class="fa-solid fa-share-nodes fs-6 pb-2"></i>
+                <i class="fa-solid fa-globe fs-6 pb-1"></i>
+            </div>
+        </div>
+    </section>
+    <div class="loading d-none">
+        <span class="loader"></span>
+    </div>
+    <section id="home" class="d-block pb-5 pt-3 ">
+        <div class="container">
+            <div class="row" id="dataMeals">
+            </div>
+        </div>
+    </section>
+    <section id="Details" class="pb-5 d-none  top-0 bg-black w-100">
+        <div class="container">
+            <div id="DetailsTab" class="row ">
+                
+            </div>
+        </div>
+    </section>
+    <section id="searchPage" class=" d-none">
+        <div class="container">
+            <div class="row py-5 w-75 m-auto">
+                <div class="col-md-5">
+                    <input id="mealSearch" class="form-control input-lg mb-2" type="text" placeholder="Search By Name">
+                </div>
+                <div class="col-md-5">
+                    <input id="charSearch" class="form-control input-lg mb-2" type="text"
+                        placeholder="Search By First Letter">
+                </div>
+                <div class="col-md-2"><button id="searchBtn"
+                        class="btn m-auto d-block SearchBtn border-1 border-white text-white-50 "> Search </button>
+                </div>
+            </div>
+
+            <div class="row" id="searchMeals">
+
+            </div>
+        </div>
+    </section>
+    <section id="cat" class="d-none">
+        <div class="container">
+            <div class="row" id="catContent">
+
+            </div>
+        </div>
+    </section>
+    <section id="area" class="d-none">
+        <div class="container">
+            <div class="row" id="showareas">
+                <div class="col-md-3">
+                    <img src="" alt="">
+                    <h2></h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Ingredients" class="Ingredients d-none">
+        <div class="container">
+            <div id="IngredientsShow" class="row">
+
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact d-none">
+        <div class="container">
+            <div class="row vh-100 d-flex justify-content-center align-items-center">
+                <div class="col-md-6">
+                    <input id="name" class="form-control input-lg my-3" type="text" placeholder="Enter Your Name">
+                    <div
+                        class="d-none validName valid rounded-3 w-100 d-flex justify-content-center align-items-center text-black-50">
+                        Special characters and numbers not allowed</div>
+                    <input id="number" class="form-control input-lg my-3" type="text" placeholder="Enter Your Phone">
+                    <div
+                        class="d-none validNumber valid rounded-3 w-100 d-flex justify-content-center align-items-center text-black-50">
+                        Enter valid Phone Number</div>
+                    <input id="pass" class="form-control input-lg my-3" type="password"
+                        placeholder="Enter Your Password">
+                    <div
+                        class=" validPass valid rounded-3 w-100 d-flex justify-content-center align-items-center text-black-50">
+                        Enter valid password *Minimum eight characters, at least one letter and one number:*</div>
+                </div>
+                <div class="col-md-6">
+                    <input id="email" class="form-control input-lg my-3" type="text" placeholder="Enter Your E-Mail">
+                    <div
+                        class=" d-none valid rounded-3 w-100 d-flex justify-content-center align-items-center text-black-50">
+                        Email not valid *exemple@yyy.zzz</div>
+                    <input id="age" class="form-control input-lg my-3" type="text" placeholder="Enter Your Age">
+                    <div
+                        class="d-none valid validage rounded-3 w-100 d-flex justify-content-center align-items-center text-black-50">
+                        Enter valid age</div>
+                    <input id="repass" class="form-control input-lg my-3" type="password" placeholder="Repassword">
+                    <div
+                        class="validRepass valid rounded-3 w-100 d-flex justify-content-center align-items-center text-black-50">
+                        Enter valid repassword</div>
+                </div>
+                <button class="btn btn-outline-light w-25">submit</button>
+            </div>
+        </div>
+    </section>
+    <script src="../js/Ingredients.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/categories.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../js/area.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
